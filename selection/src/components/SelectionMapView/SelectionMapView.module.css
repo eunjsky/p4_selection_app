@@ -1,0 +1,14 @@
+.selectionmapview {
+  flex-basis: 50%;
+}
+.mapcontainer {
+  background-color: beige;
+  min-height: 85vh;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0px;
+  color: Black;
+}

@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.input,
+.textarea {
+  font-size: 0.8rem;
+  width: 400px;
+  padding: 10px;
+}
+
+.textarea {
+  flex-basis: 100%;
+}
+.input {
+  flex: 1 1 50%;
+}
+
+.button {
+  background-color: rgb(11, 40, 42);
+  border: white;
+  color: white;
+  margin: 10px 5px;
+  padding: 2px 15px;
+  border-radius: 5%;
+}
