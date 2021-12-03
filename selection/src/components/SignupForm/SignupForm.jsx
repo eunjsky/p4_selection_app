@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import styles from './SignupForm.module.css';
 import userService from '../../services/userService'
 
 
@@ -33,22 +33,22 @@ class SignupForm extends Component {
     }
     render(){
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} className={styles.form}>
                 <h3>Sign Up</h3>
-                <div className="form-group">
+                <div className={styles.input}>
                     <input type="text" placeholder="Name" className="form-control" name="name" onChange={this.handleChange}/>
                 </div>
-                <div className="form-group">
+                <div className={styles.input}>
                     <input type="email" placeholder="Email" className="form-control" name="email" onChange={this.handleChange}/>
                 </div>
-                <div className="form-group">
+                <div className={styles.input}>
                     <input type="password" placeholder="Password" className="form-control" name="password" onChange={this.handleChange}/>
                 </div>
-                <div className="form-group">
+                <div className={styles.input}>
                     <input type="password" placeholder="Confirm Pasword" name="confirmPassword" className="form-control" onChange={this.handleChange}/>
                 </div>
-                <div className="form-group">
-                    <button className="btn btn-default">Sign up</button>
+                <div className={styles.buttonbox}>
+                    <button className={styles.button}>Sign up</button>
                 </div>
             </form>
         )

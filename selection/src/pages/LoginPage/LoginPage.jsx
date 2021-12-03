@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import userService from '../../services/userService'
-import './LoginPage.css'
+import styles from './LoginPage.module.css'
 
 class LoginPage extends Component {
     constructor(props){
@@ -31,17 +31,17 @@ class LoginPage extends Component {
     }
     render(){
         return (
-            <div className="LoginPage">
+            <div className={styles.LoginPage}>
             <form onSubmit={this.handleSubmit}>
-                <h3>Log In</h3>
-                <div className="form-group">
+                <h3 style={{marginBottom:"10px"}}>Log In</h3>
+                <div className={styles.emailinput}>
                     <input type="email" placeholder="Email" className="form-control" name="email" onChange={this.handleChange}/>
                 </div>
                 <div className="form-group">
                     <input type="password" placeholder="Password" className="form-control" name="password" onChange={this.handleChange}/>
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-default">Log in</button>
+                    <button className={styles.button}>Log in</button>
                 </div>
             </form>
             </div>

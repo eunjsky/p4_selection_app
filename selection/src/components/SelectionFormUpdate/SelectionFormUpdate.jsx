@@ -62,14 +62,23 @@ function SelectionFormUpdate(props){
     
 
     return(
-        <section>
-        <h4>Selection Form</h4>
+        <section className={styles.container}>
+        <div className={styles.title}>Edit Selection Info</div>
         <form className={styles.form}>
-            <input type="text" defaultValue={props.selection.name} className={styles.input} onChange={nameEditTo}/>
-            <input type="text" defaultValue={props.selection.cuisines} className={styles.input} onChange={cuisinesEditTo} />
-            <input type="text" efaultValue={props.selection.address} className={styles.input} onChange={addressEditTo} />
-            <textarea defaultValue={props.selection.review} className={styles.textarea} onChange={reviewEditTo} ></textarea>
-            <textarea defaultValue={props.selection.description} className={styles.textarea} onChange={DescEditTo}></textarea>
+            <input type="text" defaultValue={props.selection.name} className={styles.input} placeholder="Name" onChange={nameEditTo}/>
+
+            <select defaultValue={props.selection.cuisines} className={styles.input} onChange={cuisinesEditTo}>
+                <option>African cuisine</option>
+                <option>Americas cuisine</option>
+                <option>Asian cuisine</option>
+                <option>European cuisine</option>
+                <option>Oceanian cuisine</option>
+                <option>Others</option>
+            </select>
+            
+            <input type="text" defaultValue={props.selection.address} placeholder="Address" className={styles.input} onChange={addressEditTo} />
+            <textarea defaultValue={props.selection.review} placeholder="Review" className={styles.textarea} onChange={reviewEditTo} ></textarea>
+            <textarea defaultValue={props.selection.description} placeholder="Description" className={styles.textarea} onChange={DescEditTo}></textarea>
             <button className={styles.button} onClick={handleFormSubmit} >Edit</button>
             <button className={styles.button} onClick={onDelete}>Delete</button>
         </form>

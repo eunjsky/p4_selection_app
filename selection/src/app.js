@@ -13,6 +13,7 @@ import SelectionAdd from './components/SelectionAdd/SelectionAdd';
 import SelectionView from './components/SelectionView/SelectionView';
 import SelectionDetail from './components/SelectionDetail/SelectionDetail';
 import tokenService from './services/tokenService';
+import Home from './components/Home/Home';
 
 class App extends Component {
 
@@ -42,11 +43,12 @@ class App extends Component {
           <Navbar currentUser = {this.state.user} handleLogout={this.handleLogout}/>
           <Switch>
             <Route path='/' exact>
-              <h1>Welcome</h1>
+              <Home />
             </Route>
             <ProtectedRoute exact path='/selections' component={SelectionView} />
             
             <ProtectedRoute exact path='/selections/new' component={SelectionAdd} />
+
     
             <Route exact path='/selections/:id' component={SelectionDetail} />
 

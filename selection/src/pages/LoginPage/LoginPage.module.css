@@ -1,0 +1,22 @@
+.LoginPage {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px;
+  text-align: center;
+}
+
+.button {
+  background-color: orange;
+  border: white;
+  color: white;
+  margin: 10px 5px;
+  padding: 2px 15px;
+  border-radius: 5%;
+  font-weight: bold;
+}
+
+.emailinput {
+  margin-bottom: 10px;
+}

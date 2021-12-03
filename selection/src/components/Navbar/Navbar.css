@@ -2,8 +2,9 @@
   display: flex;
   flex: 1;
   height: 70px;
-  background-color: #778899;
+  background-color: #ff9900;
   align-items: center;
+  font-weight: bold;
 }
 
 .nav ul {
@@ -16,16 +17,16 @@
 }
 
 .nav ul li {
-  width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 5px;
+  padding: 10px;
 }
 
-.nav ul li:hover {
+.nav ul .hover :hover {
   cursor: pointer;
-  background-color: blue;
-  font-weight: bold;
+  border-bottom: 2px dotted rgb(255, 255, 103);
 }
 
 .nav ul li a {
@@ -33,10 +34,19 @@
   color: white;
 }
 
-.nav ul li.active {
-  background-color: blue;
-}
 .nav ul li span {
   color: white;
   font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .nav ul {
+    display: flex;
+    flex: column;
+  }
+}
+
+.title {
+  color: black;
+  margin: 20px;
 }

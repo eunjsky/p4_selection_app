@@ -2,7 +2,9 @@ import React,  { Component } from 'react'
 import { Switch, Link, Route, BrowserRouter as Router  } from 'react-router-dom'
 import { getSelections } from '../../services/selections';
 import SelectionFormUpdate from '../SelectionFormUpdate/SelectionFormUpdate';
-import style from './SelectionDetail.module.css'
+import styles from './SelectionDetail.module.css'
+
+
 
 class SelectionDetail extends Component {
     constructor(props){
@@ -18,9 +20,9 @@ class SelectionDetail extends Component {
         const id = this.props.match.params.id
         const selections = await getSelections()
         const currentSelection = selections.find(selection => selection._id === id )
-        console.log(selections)
-        console.log("this is the id")
-        console.log(currentSelection._id)
+        // console.log(selections)
+        // console.log("this is the id")
+        // console.log(currentSelection.id)
         const selectionObject = {name: currentSelection.name, cuisines: currentSelection.cuisines, address: currentSelection.address, review: currentSelection.review, description: currentSelection.description, id: currentSelection._id }
 
 
@@ -43,26 +45,36 @@ class SelectionDetail extends Component {
     //to use nested routes, the parent route must have a <Router> block
     render(){
         return (
+            <div className={styles.detailview}>
+                <div className={styles.section}>
             <Router>
                 <Switch>
                 <Route exact path={this.props.match.path}>
-                <div className={style.wrapper}>
-                    <div className={style.card}>
-                    <div className={style.container}>
-                        <div>{this.state.selection.name}</div> 
-                    </div>
+                <div className={styles.container}>
+                <div className={styles.card}>
+                <div className={styles.header}>{this.state.selection.name}</div>
+                <p className={styles.bodytext}>
+                Address: {this.state.selection.address}<br/>
+                Cuisines: {this.state.selection.cuisines}<br/>
+                Review: {this.state.selection.review}<br/>
+                Description: {this.state.selection.description}<br/> </p>
+                </div>
+
                      {/* <button onClick={this.toggleShowEditForm}>Edit</button> */}
-                     <Link to={ `/selections/${this.props.match.params.id}/edit` }
-                     >edit</Link>
+                     <div><Link className={styles.button} to={ `/selections/${this.props.match.params.id}/edit` }
+                     >Edit</Link></div>
                     </div>
                     
-                </div>
+                
                 </Route>
-                <Route path={ `${this.props.match.path}/edit` }>
+                <Route path={ `${this.props.match.path}/edit`}>
                     <SelectionFormUpdate selection={this.state.selection} />
                 </Route>
             </Switch>
             </Router>
+            
+            </div>
+            </div>
         )
     }
 }

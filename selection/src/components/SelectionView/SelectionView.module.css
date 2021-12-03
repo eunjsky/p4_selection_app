@@ -1,6 +1,6 @@
-.selectionview {
+/* .selectionview {
   flex-basis: 50%;
-}
+} */
 
 .viewcontainer {
   background-color: rgb(99, 188, 188);
@@ -13,6 +13,7 @@
   text-align: center;
   margin: 20px 0px;
   color: Black;
+  font-weight: bold;
 }
 
 a {

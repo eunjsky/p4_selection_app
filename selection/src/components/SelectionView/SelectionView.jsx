@@ -25,8 +25,8 @@ class SelectionView extends Component {
     render() {
         return(
             <div className={styles.viewcontainer}>
-            <section className={styles.selectionview}>
-            <h2 className={styles.title}>Selection View</h2>
+            
+            <h2 className={styles.title}>Selection List</h2>
            
             {
             this.state.selections.length > 0 &&
@@ -42,7 +42,7 @@ class SelectionView extends Component {
                 !this.state.selections.length === 0 && <div>Dont have data</div>
             }
     
-    </section>
+    
     </div>)
     }
 }

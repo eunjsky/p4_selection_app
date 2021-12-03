@@ -8,22 +8,22 @@ function Navbar(props){
 
     let nav = props.currentUser ?
     <div className="nav">
-        <div>navbar</div>
+        <div className="title">Select App</div>
         <ul>
-            <li><NavLink to='/' activeClassName="active">Home</NavLink></li>
-            <li><NavLink to='/selections' activeClassName="active">Selections</NavLink></li>
-            <li><NavLink to='/selections/new' activeClassName="active">Add Selections</NavLink></li>
-            <li><span className="user">Welcome {props.currentUser.name}</span></li>
-            <li><NavLink to='login'className='NavBar-link' onClick={props.handleLogout}>LOG OUT</NavLink></li>
+            <li className="hover"><NavLink to='/' activeClassName="active">Home</NavLink></li>
+            <li className="hover"><NavLink to='/selections' activeClassName="active">Selection List</NavLink></li>
+            <li className="hover"><NavLink to='/selections/new' activeClassName="active">Add Selection</NavLink></li>
+            <li><span className="user">Welcome&nbsp;&nbsp;</span><span style={{color:"black"}}> {props.currentUser.name}&nbsp;💛 </span></li>
+            <li className="hover"><NavLink to='login'className='NavBar-link' onClick={props.handleLogout}>Logout</NavLink></li>
         </ul>
     </div> 
     :
     <div className="nav">
-        <div>navbar</div>
+        <div className="title">Select App</div>
         <ul>
-            <li><NavLink to='/' activeClassName="active">Home</NavLink></li>
-            <li><NavLink to='/login' activeClassName="active">Login</NavLink></li>
-            <li><NavLink to='/signup' activeClassName="active">Signup</NavLink></li>
+            <li className="hover"><NavLink to='/' activeClassName="active">Home</NavLink></li>
+            <li className="hover"><NavLink to='/login' activeClassName="active">Login</NavLink></li>
+            <li className="hover"><NavLink to='/signup' activeClassName="active">Signup</NavLink></li>
         </ul>
     </div> 
 

@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  margin: 20px;
+}
+.card {
+  background-color: #ffc549;
+  width: 500px;
+  padding: 20px 40px;
+  border-radius: 50px 20px;
+}
+
+.header {
+  padding-left: 10px;
+  border-bottom: 3px dotted rgb(99, 188, 188);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.bodytext {
+  padding-left: 10px;
+  margin-top: 15px;
+}
