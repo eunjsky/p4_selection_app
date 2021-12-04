@@ -10,11 +10,11 @@ The more people there are, the more helpful it is.
 
 ## Screenshot(s):
 
-![main page](main_app/static/images/home.jpg)
-![Home page](main_app/static/images/about.jpg)
-![add page](main_app/static/images/addtrail.jpg)
-![list page](main_app/static/images/Viewstrail.jpg)
-![detail page](main_app/static/images/detail.jpg)
+![main page](src/img/main.png)
+![list page](src/img/list.png)
+![detail page](src/img/detail.png)
+![edit page](src/img/edit.png)
+![add page](src/img/add.png)
 
 ## Technologies Used:
 
@@ -24,7 +24,6 @@ React, MongoDB/Mongoose, Express, Node, CSS, Heroku
 
 Heroku: [Click]()
 
-![Trello]()
 ![Wireframe](src/img/Wireframes.png)
 ![ERD](src/img/ERD.png)
 
