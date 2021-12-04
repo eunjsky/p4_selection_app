@@ -24,7 +24,8 @@ class SelectionDetail extends Component {
         // console.log("this is the id")
         // console.log(currentSelection.id)
         const selectionObject = {name: currentSelection.name, cuisines: currentSelection.cuisines, address: currentSelection.address, review: currentSelection.review, description: currentSelection.description, id: currentSelection._id }
-
+        console.log('this is props')
+        
 
         this.setState({
             selection: selectionObject
@@ -32,17 +33,12 @@ class SelectionDetail extends Component {
         console.log(this.state.selection)
     }
 
-    /* use arrow functions when defining event handlers */
     toggleShowEditForm = () => {
         this.setState((state) => {
             return {showEditForm: !state.showEditForm}
         })
     }
 
-    /* write method to update state, given some data */
-
-    /* write method to send student detail to the api */
-    //to use nested routes, the parent route must have a <Router> block
     render(){
         return (
             <div className={styles.detailview}>
@@ -60,7 +56,7 @@ class SelectionDetail extends Component {
                 Description: {this.state.selection.description}<br/> </p>
                 </div>
 
-                     {/* <button onClick={this.toggleShowEditForm}>Edit</button> */}
+
                      <div><Link className={styles.button} to={ `/selections/${this.props.match.params.id}/edit` }
                      >Edit</Link></div>
                     </div>

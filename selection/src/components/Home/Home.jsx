@@ -1,17 +1,17 @@
 import React from 'react'
-// import styles from './Home.module.css'
+import styles from './Home.module.css'
+import img from './question.png'; 
 
 
 function Home(props) {
 
     return (
-        <div>
-            <h2>Welcome 😎 </h2>
-            {/* <div className={styles.img}></div> */}
-            <p>
-            You don't know, where you want to go for dinner?<br/>
-            This App will help you!<br/>
-        
+        <div className={styles.mainbox}>
+          
+            <p className={styles.title}>Are you ready to select one? 😎</p>
+            <br/>
+            <div><img className={styles.img} src={img}/></div>
+            <p className={styles.para}>It will help you make decisions.<br/>
             </p>
 
 

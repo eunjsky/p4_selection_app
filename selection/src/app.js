@@ -3,6 +3,7 @@ import {
   Route, Switch, Redirect
 } from "react-router-dom";
 import React, { Component } from 'react';
+import MapView from './components/MapView/MapView';
 import SignupPage from './pages/SignupPage/SignupPage';
 import userService from './services/userService';
 import LoginPage from './pages/LoginPage/LoginPage';
@@ -14,15 +15,21 @@ import SelectionView from './components/SelectionView/SelectionView';
 import SelectionDetail from './components/SelectionDetail/SelectionDetail';
 import tokenService from './services/tokenService';
 import Home from './components/Home/Home';
+//import DetailAndMapView from './components/DetailAndMapView/DetailAndMapView';
+import { getCurrentLatLng } from './services/geolocation';
+import Footer from './components/Footer/Footer'
+
 
 class App extends Component {
 
   constructor(){
     super()
     this.state = {
-      user: userService.getUser() 
+      user: userService.getUser(), 
+  
     }
   }
+
 
   handleLogout = () => {
     console.log('logout')
@@ -41,9 +48,11 @@ class App extends Component {
     <Router>
         <div className="App">
           <Navbar currentUser = {this.state.user} handleLogout={this.handleLogout}/>
+          
+
           <Switch>
             <Route path='/' exact>
-              <Home />
+            <Home />
             </Route>
             <ProtectedRoute exact path='/selections' component={SelectionView} />
             
@@ -51,6 +60,7 @@ class App extends Component {
 
     
             <Route exact path='/selections/:id' component={SelectionDetail} />
+            
 
             <Route exact path='/signup' render={({ history }) => 
             <SignupPage
@@ -64,6 +74,7 @@ class App extends Component {
               <Redirect to='/login'/>
           </Switch>
         </div>
+        <Footer />
       </Router>
   
   );

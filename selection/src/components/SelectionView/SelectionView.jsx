@@ -30,7 +30,7 @@ class SelectionView extends Component {
            
             {
             this.state.selections.length > 0 &&
-            <div>
+            <div ClassName={styles.innerdiv}>
                 { this.state.selections.map((selection, idx) => <div key ={idx}> 
                 <Link to ={`/selections/${selection._id}`}>
                 <div><Selection key={selection.id} selection={selection} /></div>

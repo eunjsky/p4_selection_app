@@ -23,3 +23,8 @@ a {
 a:hover {
   cursor: pointer;
 }
+
+.innerdiv {
+  display: inline-block;
+  justify-content: center;
+}

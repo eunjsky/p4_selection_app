@@ -43,14 +43,11 @@ function SelectionFormUpdate(props){
         console.log(props.selection.id)
 
         
-        const result = updateSelections(data, props.selection.id)
+        const res = updateSelections(data, props.selection.id)
         history.push('/selections')
-        console.log(history)
+        
         //this.setState
         
-
-        /* call parent component function to update student data */
-        /* call parent component function to save updated data to the database */
     
     };
     
@@ -58,6 +55,7 @@ function SelectionFormUpdate(props){
         event.preventDefault()
         const result = deleteSelections( props.selection.id)
         history.push('/selections')
+        console.log(history)
     };
     
 
@@ -79,7 +77,7 @@ function SelectionFormUpdate(props){
             <input type="text" defaultValue={props.selection.address} placeholder="Address" className={styles.input} onChange={addressEditTo} />
             <textarea defaultValue={props.selection.review} placeholder="Review" className={styles.textarea} onChange={reviewEditTo} ></textarea>
             <textarea defaultValue={props.selection.description} placeholder="Description" className={styles.textarea} onChange={DescEditTo}></textarea>
-            <button className={styles.button} onClick={handleFormSubmit} >Edit</button>
+            <button className={styles.button} onClick={handleFormSubmit} >Submit</button>
             <button className={styles.button} onClick={onDelete}>Delete</button>
         </form>
         </section> 

@@ -7,7 +7,7 @@ const createSelections = function(data){
     console.log(data)
     return fetch('/api/selections/new', {
         method: 'POST',
-        headers: new Headers({"Content-Type": "application/json"}),
+        headers: new Headers({"Content-Type": "application/json"}),//Authorization: token
         body: JSON.stringify(data)
     }).then(res => res.json())
 }

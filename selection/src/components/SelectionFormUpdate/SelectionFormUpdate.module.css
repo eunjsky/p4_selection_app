@@ -1,9 +1,9 @@
 .container {
   display: flex;
   flex-direction: column;
-
+  height: 90vh;
   padding: 20px;
-  margin: 20px;
+  margin: auto;
   max-width: 800px;
 }
 .title {

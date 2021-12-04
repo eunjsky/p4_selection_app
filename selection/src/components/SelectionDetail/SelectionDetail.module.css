@@ -1,5 +1,7 @@
 .detailview {
   flex-basis: 50%;
+  background-color: #fff7dd;
+  height: 90vh;
 }
 
 .section {

@@ -4,12 +4,13 @@ import { NavLink } from "react-router-dom";
 
 
 
+
 function Navbar(props){
 
     let nav = props.currentUser ?
     <div className="nav">
         <div className="title">Select App</div>
-        <ul>
+        <ul> 
             <li className="hover"><NavLink to='/' activeClassName="active">Home</NavLink></li>
             <li className="hover"><NavLink to='/selections' activeClassName="active">Selection List</NavLink></li>
             <li className="hover"><NavLink to='/selections/new' activeClassName="active">Add Selection</NavLink></li>
@@ -25,6 +26,7 @@ function Navbar(props){
             <li className="hover"><NavLink to='/login' activeClassName="active">Login</NavLink></li>
             <li className="hover"><NavLink to='/signup' activeClassName="active">Signup</NavLink></li>
         </ul>
+
     </div> 
 
     return nav

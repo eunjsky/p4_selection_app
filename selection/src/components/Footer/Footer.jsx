@@ -1,13 +1,11 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import styles from './Footer.module.css'
 
 const Footer = () => {
     return (
-        <Container style={{textAlign:"center", marginTop:"5px"}}>
-        <div>
-            &copy; 2021 Select app. All Rights Reserved
-        </div>
-        </Container>
+        
+        <div className={styles.footer}> &copy; 2021 Select app. All Rights Reserved</div>
+        
     )
 }
 

@@ -1,0 +1,20 @@
+.search {
+  position: absolute;
+  top: 8rem;
+  left: 100%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 400px;
+  z-index: 10;
+}
+
+.bothview {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
